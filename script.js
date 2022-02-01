@@ -45,6 +45,4 @@ gen.addEventListener('click', e => {
 	generate(rangeNum);
 })
 
-console.log(ABCBox);
-
 generate(rangeNum);
