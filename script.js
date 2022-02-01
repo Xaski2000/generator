@@ -5,6 +5,7 @@ symbol = ["!", "@", "#", "$", "%", "^", "&", "*"]
 const input = document.querySelector('#input'),
 		range = document.querySelector('#range'),
 		gen = document.querySelector('#gen__but'),
+		copy = document.querySelector('#copy__but'),
 		ABCBox = document.querySelector('#ABC__box'),
 		abcBox = document.querySelector('#abc__box'),
 		symbolBox = document.querySelector('#symbol__box');
@@ -43,6 +44,13 @@ symbolBox.addEventListener('input', e => {
 })
 gen.addEventListener('click', e => {
 	generate(rangeNum);
+})
+copy.addEventListener('click', e => {
+	navigator.clipboard.writeText(input.value).then(function() {
+		/* clipboard successfully set */
+	 }, function() {
+		/* clipboard write failed */
+	 });
 })
 
 generate(rangeNum);
