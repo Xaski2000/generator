@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Generator</title>
-	<link rel="stylesheet" href="./style.css">
-</head>
-<body>
-	<input id="input" type="text">
-	<input id="range" type="range" min="0" max="30" step="1" value="10">
-	<button id="gen__but">generate</button>
-	<button id="copy__but">copy</button>
-	<label>
-		<input id="ABC__box" type="checkbox" checked>
-		ABC
-	</label>
-	<label>
-		<input id="abc__box" type="checkbox" checked>
-		abc
-	</label>
-	<label>
-		<input id="symbol__box" type="checkbox" checked>
-		$;#@;
-	</label>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Generator</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
 
-	<script src="./script.js"></script>
-</body>
+	<body>
+		<h1 class="title">Generate a secure password</h1>
+		<div class="wrapper">
+			<input id="input" type="text" />
+			<label class="range__box">
+				<input
+					id="range"
+					type="range"
+					min="0"
+					max="30"
+					step="1"
+					value="10"
+				/>
+				<p class="range__name">range</p>
+			</label>
+			<button id="gen__but">generate</button>
+			<button id="copy__but">copy</button>
+			<div class="label__wrapper">
+				<label class="label__box">
+					<input id="ABC__box" type="checkbox" checked />
+					<p class="box__name">ABC</p>
+				</label>
+				<label class="label__box">
+					<input id="abc__box" type="checkbox" checked />
+					<p class="box__name">abc</p>
+				</label>
+				<label class="label__box">
+					<input id="symbol__box" type="checkbox" checked />
+					<p class="box__name">$;#@;</p>
+				</label>
+			</div>
+		</div>
+
+		<div class="bubble">
+			<p class="bubble__text">password copied</p>
+		</div>
+		<script src="./script.js"></script>
+	</body>
 </html>

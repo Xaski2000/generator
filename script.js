@@ -1,6 +1,7 @@
 const ABC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
-symbol = ["!", "@", "#", "$", "%", "^", "&", "*"]
+symbol = ["!", "@", "#", "$", "%", "^", "&", "*", ".", ","]
+
 
 const input = document.querySelector('#input'),
 		range = document.querySelector('#range'),
@@ -13,7 +14,7 @@ const input = document.querySelector('#input'),
 let rangeNum = '10';
 
 function generate(e) {
-	let arr = [];
+	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 	if (ABCBox.checked){
 		arr = arr.concat(ABC)
 	} if (abcBox.checked){
@@ -51,6 +52,13 @@ copy.addEventListener('click', e => {
 	 }, function() {
 		/* clipboard write failed */
 	 });
+
+	 document.querySelector('.bubble').classList.add('bubble__active');
+	 setTimeout(bubbleHide, 3000);
 })
+
+function bubbleHide() {
+	document.querySelector('.bubble').classList.remove('bubble__active');
+}
 
 generate(rangeNum);
