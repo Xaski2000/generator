@@ -5,6 +5,7 @@ symbol = ["!", "@", "#", "$", "%", "^", "&", "*", ".", ","]
 
 const input = document.querySelector('#input'),
 		range = document.querySelector('#range'),
+		rangeIndex = document.querySelector('.range__index'),
 		gen = document.querySelector('#gen__but'),
 		copy = document.querySelector('#copy__but'),
 		ABCBox = document.querySelector('#ABC__box'),
@@ -31,6 +32,7 @@ function generate(e) {
 
 range.addEventListener('input', e => {
 	rangeNum = e.target.value;
+	rangeIndex.innerText = e.target.value;
 	generate(rangeNum);
 })
 
