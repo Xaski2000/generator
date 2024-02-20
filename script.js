@@ -50,9 +50,9 @@ gen.addEventListener('click', e => {
 })
 copy.addEventListener('click', e => {
 	navigator.clipboard.writeText(input.value).then(function() {
-		/* clipboard successfully set */
+		console.log("copyed")
 	 }, function() {
-		/* clipboard write failed */
+		console.log("error")
 	 });
 
 	 document.querySelector('.bubble').classList.add('bubble__active');
